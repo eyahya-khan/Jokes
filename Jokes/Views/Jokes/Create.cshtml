@@ -21,16 +21,16 @@
                 <label asp-for="JokeAnswer" class="control-label"></label>
                 <input asp-for="JokeAnswer" class="form-control" />
                 <span asp-validation-for="JokeAnswer" class="text-danger"></span>
-            </div>
+            </div><br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-primary"><i class="bi bi-arrow-left-square"></i></a>
 </div>
 
 @section Scripts {
