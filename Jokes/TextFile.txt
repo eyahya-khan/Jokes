@@ -1,2 +1,59 @@
 ﻿******* Jokes Application  *******
 
+"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=aspnet-Jokes-CE248F16-E9E7-419F-B02B-C91CA13D8901;Trusted_Connection=True;MultipleActiveResultSets=true"
+
+
+
+******* Installation *******
+
+new project >>> ASP.NET Core Web Application >>> project name: Jokes >>> Web Application (Model-View-Controller)  & 
+Authentication: Individual User >>> Create
+
+
+
+
+******* Model *******
+
+Step-1: Create a model name (right click on Model folder >>> Add >>> Class >>> Joke.cs)
+
+Step-2: prop & click 2 time tab and  ctor and press 2 times tab
+
+
+******** Controller *******
+
+Step-1: Right click on Controller folder >>> Add >>> Controller >>> MVC Controller with views, using Entity Framework
+ >>> Add >>>
+ select model class: (Joke) >>> 
+ select/write new data context type: Jokes.Data.ApplicationDbContext >>> controller name: JokesController.cs
+ Create
+
+
+
+
+ ******* Migration *******
+
+ step-1: Tools >>> NuGet Package Manager >>> Package Manager Console >>> add-migration addDatabase >>> Update-database
+
+
+
+
+
+ ******* Search form  *******
+
+ step-1: In JokesController.cs >>> create method ShowSearchForm
+
+ step-2: In Right click on ShoeSearchForm() >>> Add view >>> Razor page >>> 
+ View name: ShowSearchForm, Template: Create, Model class: Joke, Options: Create as a partial view >>> Add
+
+ Step-3: Edit View >>> ShowSearchForm.cshtml
+
+ Step-4: Add asp-action="ShowSearchResults" into <form>
+
+ Step-5: goto JokesController.cs >>> add ShowSearchResults method 
+
+
+
+
+ ******* Authorize *******
+
+ Step-1: add [Authorize] in front of method
